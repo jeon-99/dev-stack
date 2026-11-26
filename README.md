@@ -1,16 +1,69 @@
-# React + Vite
+# Dev Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Dev Stack is a responsive React app for exploring development technologies and assembling a personal stack. Browse and search the catalog, filter by category, and add or remove tools from your stack.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Responsive layout with desktop navigation and a mobile menu
+- Technology catalog loaded from [`public/technologies.json`](./public/technologies.json)
+- Search and category filters
+- Stack panel with duplicate prevention, individual removal, and a remove-all action
+- Toast notifications for stack changes
+- Shared orange-to-pink-to-violet brand gradient
 
-## React Compiler
+The selected stack is held in app state and resets when the page is reloaded.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Requirements
 
-## Expanding the Oxlint configuration
+- Node.js (LTS recommended)
+- npm
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Getting started
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Vite prints the local URL in the terminal (typically `http://localhost:5173`).
+
+## Available scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite development server |
+| `npm run build` | Create the production build in `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run Oxlint |
+
+## Technology stack
+
+- React
+- Vite
+- React-Toastify
+- Oxlint
+
+Technology icons and Google Fonts are served from external CDNs and require an internet connection.
+
+## Project structure
+
+```text
+public/
+  technologies.json    Technology catalog
+src/
+  App.jsx               App UI and stack interactions
+  App.css               Component and responsive styles
+  index.css             Global styles and theme variables
+  main.jsx              React entry point
+```
+
+## Credits
+
+Developed by **Jeon**.
